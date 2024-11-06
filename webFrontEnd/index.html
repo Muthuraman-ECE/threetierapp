@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Employee Management System</h1>
+    
+    <div id="employee-form">
+        <h2>Add New Employee</h2>
+        <form id="add-employee">
+            <input type="text" name="eid" placeholder="Employee ID" required>
+            <input type="text" name="ename" placeholder="Employee Name" required>
+            <input type="email" name="eemail" placeholder="Email" required>
+            <input type="text" name="econtact" placeholder="Contact Number" required>
+            <button type="submit">Add Employee</button>
+        </form>
+        <p id="upload-status"></p>
+    </div>
+    
+    <div id="employee-list">
+        <h2>Employee List</h2>
+        <button onclick="fetchEmployees()">Refresh Employee List</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="employees">
+                <!-- Employee rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
